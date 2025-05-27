@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index - Glow Haven</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="cart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+<header class="bg-white shadow-md py-4 px-6 flex items-center justify-between">
+  <div class="text-2xl font-bold text-pink-600 tracking-wider">Glow Haven</div>
+  
+  <nav class="space-x-4 hidden md:flex text-sm">
+    <a href="index.html" class="hover:text-pink-500">Home</a>
+    <a href="products.html" class="hover:text-pink-500">Products</a>
+    <a href="about.html" class="hover:text-pink-500 transition">About</a>
+    <a href="Links.html" class="hover:text-pink-500 transition">Quick Links</a>
+
+
+
+  </nav>
+
+
+  <button id="open-cart" class="relative hover:text-pink-600 text-xl ml-4">
+    <i class="fa fa-shopping-bag"></i>
+    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+  </button>
+</header>
+
+    <style>
+  @keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .fade-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fade 5s infinite alternate;
+  }
+
+  .fade-img:nth-child(2) {
+    animation-delay: 3s;
+  }
+</style>
+
+<section class="relative w-full h-[500px] overflow-hidden">
+ 
+  <img src="images/hero2.jpeg" class="fade-img" />
+  <img src="images/hero1.jpeg" class="fade-img" />
+
+ 
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Discover Your Radiance at Glow Haven</h1>
+  </div>
+</section>
+<!-- Introduction Section -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-semibold text-center mb-8">Glow Haven</h2>
+  <div class="text-gray-700 text-lg leading-relaxed space-y-4">
+    <p><strong>Glow Haven</strong> is a proudly Philippine-based beauty brand dedicated to enhancing natural beauty through premium skincare and cosmetics. Founded with a mission to inspire confidence and self-love, we offer a curated selection of face, eye, lip, and skincare essentials designed to meet the needs of every modern beauty enthusiast.</p>
+    
+    <p>At Glow Haven, we believe that beauty should be empowering, accessible, and fun. Our products are carefully crafted with skin-loving ingredients and trend-forward designs, ensuring both style and substance in every item. From day-to-night glam to everyday self-care, Glow Haven is your go-to haven for all things beauty.</p>
+
+    <p>Whether you're a first-time makeup user or a seasoned beauty lover, Glow Haven welcomes you to explore our collections and experience the glow you deserve. Join our growing community and start your journey to radiant beauty today.</p>
+  </div>
+</section>
+
+<style>
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 0.4s ease;
+  }
+
+  .cart-highlight {
+    animation: cartPulse 0.4s ease;
+  }
+
+  @keyframes cartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); color: #ec4899; }
+  }
+</style>
+
+
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-10">PRODUCTS</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <div class="bg-white shadow rounded-lg p-4 text-center">
+          <img src="images/face.jpeg" alt="Face" class="w-full h-32 object-cover rounded" />
+          <h3 class="mt-2 font-medium">Face</h3>
+          <a href="face.html" class="bg-pink-600 text-white px-3 py-1 rounded mt-2 inline-block">View</a>
+
+          <button class="add-to-cart bg-pink-600 text-white px-3 py-1 rounded mt-2" data-name="Face Essentials" data-price="999">Add to Cart</button>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4 text-center">
+          <img src="images/eyes.jpeg" alt="Eyes" class="w-full h-32 object-cover rounded" />
+          <h3 class="mt-2 font-medium">Eyes</h3>
+                    <a href="eyes.html" class="bg-pink-600 text-white px-3 py-1 rounded mt-2 inline-block">View</a>
+          <button class="add-to-cart bg-pink-600 text-white px-3 py-1 rounded mt-2" data-name="Eyes Palette" data-price="799">Add to Cart</button>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4 text-center">
+          <img src="images/lips.jpeg" alt="Lips" class="w-full h-32 object-cover rounded" />
+          <h3 class="mt-2 font-medium">Lips</h3>
+                    <a href="lips.html" class="bg-pink-600 text-white px-3 py-1 rounded mt-2 inline-block">View</a>
+
+          <button class="add-to-cart bg-pink-600 text-white px-3 py-1 rounded mt-2" data-name="Lip Kit" data-price="499">Add to Cart</button>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4 text-center">
+          <img src="images/tools.jpeg" alt="Tools" class="w-full h-32 object-cover rounded" />
+          <h3 class="mt-2 font-medium">Tools</h3>
+          <a href="tools.html" class="bg-pink-600 text-white px-3 py-1 rounded mt-2 inline-block">View</a>
+          <button class="add-to-cart bg-pink-600 text-white px-3 py-1 rounded mt-2" data-name="Tools" data-price="299">Add to Cart</button>
+
+        </div>
+      
+        <div class="bg-white shadow rounded-lg p-4 text-center">
+          <img src="images/skincare.jpeg" alt="Skincare" class="w-full h-32 object-cover rounded" />
+          <h3 class="mt-2 font-medium">Skincare</h3>
+          <a href="skincare.html" class="bg-pink-600 text-white px-3 py-1 rounded mt-2 inline-block">View</a>
+          <button class="add-to-cart bg-pink-600 text-white px-3 py-1 rounded mt-2" data-name="Skincare" data-price="899">Add to Cart</button>
+
+        </div>
+      </div>
+    </section>
+    
+
+<footer class="bg-pink-100 py-10 px-6 mt-10">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-sm text-gray-700">
+
+    <!-- Brand and Description -->
+    <div>
+      <h3 class="text-xl font-bold text-pink-600 mb-3">Glow Haven</h3>
+      <p>Your journey to radiant beauty starts here. Follow us on social media for daily tips and exclusive offers.</p>
+    </div>
+
+    <!-- Quick Links Organized into Two Columns -->
+    <div>
+      <h3 class="text-lg font-semibold text-pink-600 mb-3">Quick Links</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="about.html" class="hover:text-pink-500 transition">About</a>
+        <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+        <a href="mission.html" class="hover:text-pink-500 transition">Mission and Vision</a>
+        <a href="gallery.html" class="hover:text-pink-500 transition">Gallery</a>
+        <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
+        <a href="faqs.html" class="hover:text-pink-500 transition">FAQs</a>
+        <a href="testimonials.html" class="hover:text-pink-500 transition">Testimonials</a>
+          <a href="profile.html" class="hover:text-pink-500 transition">Web Developer Profile</a>
+
+
+        
+      </div>
+    </div>
+
+    <!-- Newsletter or Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold text-pink-600 mb-3">Stay Connected</h3>
+      <p>Subscribe to our newsletter for updates and promotions.</p>
+      <form class="mt-4 flex">
+        <input type="email" placeholder="Your email" class="w-full px-3 py-2 rounded-l bg-white border border-pink-300 text-sm focus:outline-none" />
+        <button type="submit" class="bg-pink-600 text-white px-4 py-2 rounded-r text-sm hover:bg-pink-500">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs text-gray-500 mt-10">
+    © 2025 Glow Haven. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-end z-50">
+  <div class="bg-white w-full sm:w-96 h-full p-6 flex flex-col relative">
+    <button id="close-cart" class="absolute top-4 right-4 text-gray-600 hover:text-pink-600 text-xl"><i class="fa fa-times"></i></button>
+    <h2 class="text-xl font-bold mb-4">Your Bag</h2>
+    <div id="cart-items" class="flex-1 overflow-y-auto space-y-4"></div>
+    <div class="border-t pt-4">
+      <div class="flex justify-between mb-4">
+        <span class="font-semibold">Total:</span>
+        <span id="cart-total" class="font-bold">₱0.00</span>
+      </div>
+      <button id="checkout-btn" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700">Checkout</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Payment modal -->
+<div id="payment-modal"
+     class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white w-full sm:w-[350px] p-6 rounded-lg relative flex flex-col">
+    <button id="close-payment"
+            class="absolute top-3 right-3 text-xl text-gray-500 hover:text-gray-800">&times;</button>
+
+    <h3 class="text-lg font-bold mb-4">Choose payment method</h3>
+
+    <select id="payment-method" class="border p-2 rounded mb-4 w-full">
+      <option value="PayMaya">PayMaya</option>
+      <option value="GCash">GCash</option>
+      <option value="PayPal">PayPal</option>
+      <option value="COD">Cash on Delivery (COD)</option>
+    </select>
+
+    <div id="qr-box" class="flex items-center justify-center h-48 mb-4"></div>
+
+    <button id="pay-now-btn"
+            class="bg-pink-600 text-white py-2 rounded hover:bg-pink-700">
+      Pay Now / Place Order
+    </button>
+  </div>
+</div>
+
+
+</body>
+</html>
